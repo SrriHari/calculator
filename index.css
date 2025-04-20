@@ -27,11 +27,10 @@ button{
     width: 100%;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     size-adjust: 10px;
     border: none;
     color: aliceblue;
-    font-size: xx-large;
     background-color: rgb(85, 84, 84);
 }
 
@@ -47,7 +46,7 @@ input{
     color: aliceblue;
     outline: none;
     border: none;
-    font-size: 2.5rem;
+    font-size: 4rem;
     height: 60px;
     padding-right: 50px;
 }
