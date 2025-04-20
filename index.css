@@ -40,7 +40,7 @@ button:hover{
 }
 
 input{
-    width: 100%;
+    width: 95%;
     height: 60px;
     text-align: end;
     background-color: black;
@@ -49,7 +49,7 @@ input{
     border: none;
     font-size: 2.5rem;
     height: 60px;
-    /* padding-right: 10px; */
+    padding-right: 50px;
 }
 
 .grey{
@@ -67,7 +67,7 @@ input{
     background-color: rgb(245, 188, 80);
 }
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
     .cal {
         height: auto;
         padding: 10px;
@@ -82,4 +82,4 @@ input{
         font-size: 2rem;
         height: 60px;
     }
-}
+} */
