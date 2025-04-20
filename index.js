@@ -1,45 +1,35 @@
-// let hari = ["abc", "def", "xyz"];
+let input = document.querySelector("input");
 
-// let h = hari.map((value, index, arr) => {
-//   return value, index, arr;
-// });
+function inValue(element) {
+  input.value += element;
+}
 
-// console.log(h);
+function cButton() {
+  input.value = "";
+}
 
-// hari.sort(a);
+function delButton() {
+  input.value = input.value.slice(0, -1);
+}
 
-/*
-forEach (no return)
-map (returns)
+function evalEq() {
+  let exp = input.value.replace(/x/g, "*");
+  input.value = eval(exp);
+}
 
-filter (all element)
-find (first matching element)
+document.addEventListener("keydown", function (e) {
+  let key = e.key;
 
-sort (a-b/b-a)
-every (AND)
-some (OR)
-
-reduce (accumulating each element)
-
-object
-
-this (calling property of the same object inside a method )
-call (another object calling)
-apply (same like call, but with array(list))
-bind (return)
-
-primitive - Stack(deepCopy)
-object, array - Heap(callByReference(shallowCopy))[for deepCopy: obj1 = {...obj2} but if a key has another obj, it is a 
-shallowCopy, to make it deepCopy eg:person2 = {...person, hobbies:{...person.hobbies}}]
-
-Another Way to make deep copy:
-by using JSON: JSON.stringify
-*/
-
-let o = [1, 2, 3, 4, 5];
-
-let sum = o.reduce((acc, val, i, arr) => {
-  return acc + val;
-}, 0);
-
-console.log(sum);
+  if (!isNaN(key) || "+-*/.".includes(key)) {
+    // If it's a number or operator
+    input.value += key;
+  } else if (key === "Enter") {
+    evalEq(); // call your evaluation function
+  } else if (key === "Backspace") {
+    input.value = input.value.slice(0, -1);
+  } else if (key === "c" || key === "C") {
+    input.value = "";
+  } else if (key.toLowerCase() === "x") {
+    input.value += "x"; // you can later convert 'x' to '*'
+  }
+});
