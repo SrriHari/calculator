@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <form class="cal">
+      <div class="form-grp">
+        <input type="text" style="grid-column: span 4" />
+      </div>
+      <div class="form-grp">
+        <button onclick="cButton()" type="button" class="grey">C</button
+        ><button onclick="delButton()" type="button" class="grey">DEL</button
+        ><button type="button" class="grey" onclick="inValue('%')">%</button
+        ><button onclick="inValue('/')" type="button" class="orang">/</button>
+      </div>
+      <div class="form-grp">
+        <button onclick="inValue('7')" type="button">7</button
+        ><button onclick="inValue('8')" type="button">8</button
+        ><button onclick="inValue('9')" type="button">9</button
+        ><button onclick="inValue('x')" type="button" class="orang">x</button>
+      </div>
+      <div class="form-grp">
+        <button onclick="inValue('4')" type="button">4</button
+        ><button onclick="inValue('5')" type="button">5</button
+        ><button onclick="inValue('6')" type="button">6</button
+        ><button onclick="inValue('-')" type="button" class="orang">-</button>
+      </div>
+      <div class="form-grp">
+        <button onclick="inValue('1')" type="button">1</button
+        ><button onclick="inValue('2')" type="button">2</button
+        ><button onclick="inValue('3')" type="button">3</button
+        ><button onclick="inValue('+')" type="button" class="orang">+</button>
+      </div>
+      <div class="form-grp">
+        <button onclick="inValue('00')" type="button">00</button
+        ><button onclick="inValue('0')" type="button">0</button
+        ><button onclick="inValue('.')" type="button">.</button
+        ><button onclick="evalEq()" type="button" class="orang">=</button>
+      </div>
+    </form>
+    <script src="cal.js" />
+  </body>
+</html>
